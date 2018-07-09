@@ -21,7 +21,7 @@ import static android.view.View.VISIBLE;
 
 public class MainActivity extends AppCompatActivity {
     Button start, button0, button1, button2, button3, playAgain,buttonji;
-    int n=0;
+    int n;
     TextView qtion, timer;
     TextView result;
     TextView pointsText;
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             numberOfQuestions = 0;
 
     public void playAgain(View view){
+        n=0;
         score = 0;
         numberOfQuestions = 0;
         timer.setText("30s");
