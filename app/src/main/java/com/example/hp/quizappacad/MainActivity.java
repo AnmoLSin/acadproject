@@ -66,17 +66,18 @@ public class MainActivity extends AppCompatActivity {
             try {
                 SQLiteDatabase db;
                 db = this.openOrCreateDatabase("notesDBB", MODE_PRIVATE, null);
-                db.execSQL("create table if not exists list1 (corr VARCHAR,incorr VARCHAR,scor VARCHAR,per VARCHAR,tot VARCHAR)");               
+                db.execSQL("create table if not exists scores (corr INT,incorr INT,scor VARCHAR,per DECIMAL,tot INT)");               
                 if (score==0 && numberOfQuestions==0)
                 {
                     int l=0;
-                    db.execSQL("insert into list1 values('" + l + "','" + l + "','" + l + "','" + l + "','" + l + "')");
+                    float k= (float) 0.0;
+                    db.execSQL("insert into scores values('" + l + "','" + l + "','" + l + "','" + k + "','" + l + "')");
                     Toast.makeText(getApplicationContext(), "Data Updated successfully", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    int p = (score * 100) / numberOfQuestions;
+                    float p = (float) (score * 100) / numberOfQuestions;
                     int s = numberOfQuestions - score;
-                    db.execSQL("insert into list1 values('" + score + "','" + s + "','" + score + "','" + p + "','" + numberOfQuestions + "')");
+                    db.execSQL("insert into scores values('" + score + "','" + s + "','" + score + "','" + p + "','" + numberOfQuestions + "')");
                     Log.i("notes", "Success");
                     Toast.makeText(getApplicationContext(), "Data Updated successfully", Toast.LENGTH_SHORT).show();
                 }
