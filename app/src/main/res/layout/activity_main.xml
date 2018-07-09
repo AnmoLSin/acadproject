@@ -194,7 +194,7 @@
         android:onClick="onClick"
         android:visibility="invisible"
         android:background="@drawable/ic_android_black_24dp"
-        android:text="Button"
+        android:text="Records"
         tools:ignore="NotSibling"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="33dp" />
