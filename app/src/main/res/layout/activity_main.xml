@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    android:background="@drawable/d"
     tools:context="com.example.hp.quizappacad.MainActivity">
 
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,7 +50,8 @@
                 android:tag="0"
                 android:id="@+id/button0"
                 android:textSize="70sp"
-                android:background="@android:color/holo_red_dark"
+                android:background="@drawable/ic_android_black_24dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:onClick="chooseAnswer" />
 
             <Button
@@ -56,7 +67,8 @@
                 android:tag="2"
                 android:id="@+id/button2"
                 android:textSize="70sp"
-                android:background="@android:color/holo_blue_bright"
+                android:background="@drawable/ic_android_black_24dp"
+                android:backgroundTint="@android:color/holo_orange_light"
                 android:onClick="chooseAnswer" />
 
             <Button
@@ -72,7 +84,8 @@
                 android:tag="3"
                 android:id="@+id/button3"
                 android:textSize="70sp"
-                android:background="?android:attr/colorFocusedHighlight"
+                android:background="@drawable/ic_android_black_24dp"
+                android:backgroundTint="?android:attr/colorFocusedHighlight"
                 android:onClick="chooseAnswer" />
 
             <Button
@@ -89,7 +102,8 @@
                 android:tag="1"
                 android:id="@+id/button1"
                 android:textSize="70sp"
-                android:background="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_purple"
+                android:background="@drawable/ic_android_black_24dp"
                 android:onClick="chooseAnswer" />
         </GridLayout>
 
@@ -123,7 +137,8 @@
             android:id="@+id/points"
             android:textSize="30sp"
             android:padding="10dp"
-            android:background="@android:color/holo_green_dark" />
+            android:background="@drawable/ic_android_black_24dp"
+            android:backgroundTint="@android:color/holo_green_light"/>
 
         <TextView
             android:text="30s"
@@ -134,7 +149,8 @@
             android:layout_alignParentStart="true"
             android:id="@+id/timer"
             android:textSize="30sp"
-            android:background="@android:color/holo_green_light"
+            android:background="@drawable/ic_android_black_24dp"
+            android:backgroundTint="@android:color/holo_green_light"
             android:padding="10dp" />
 
         <Button
@@ -143,6 +159,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/playAgain"
             android:onClick="playAgain"
+            android:background="@drawable/ic_android_black_24dp"
             android:visibility="invisible"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/qtion"
@@ -159,10 +176,27 @@
         android:textStyle="italic"
         android:textSize="60sp"
         android:padding="20dp"
-        android:background="@android:color/holo_orange_dark"
+        android:background="@drawable/ic_android_black_24dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
         android:onClick="start"
         android:visibility="visible"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="3dp"
+        android:onClick="onClick"
+        android:visibility="invisible"
+        android:background="@drawable/ic_android_black_24dp"
+        android:text="Button"
+        tools:ignore="NotSibling"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="33dp" />
 
 </RelativeLayout>
