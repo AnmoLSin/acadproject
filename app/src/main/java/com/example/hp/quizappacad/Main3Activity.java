@@ -29,7 +29,7 @@ public class Main3Activity extends AppCompatActivity {
         notes1= new ArrayList<String >();
         try{
             SQLiteDatabase db=this.openOrCreateDatabase("notesDBB",MODE_PRIVATE,null);
-            Cursor c=db.rawQuery("select * from list1 ",null);
+            Cursor c=db.rawQuery("select * from scores ",null);
             int noteIndex= c.getColumnIndex("corr");
             int noteIndex1= c.getColumnIndex("incorr");
             int noteIndex2= c.getColumnIndex("scor");
